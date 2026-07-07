@@ -1,12 +1,24 @@
-﻿import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+
+const baseUrl = "https://themelon.app";
+const lastModified = new Date("2026-07-07");
+
+const routes: Array<{
+  path: string;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+  priority: number;
+}> = [
+  { path: "", changeFrequency: "weekly", priority: 1 },
+  { path: "/support", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/privacy", changeFrequency: "yearly", priority: 0.5 },
+  { path: "/terms", changeFrequency: "yearly", priority: 0.5 },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/privacy", "/terms", "/support"];
-
   return routes.map((route) => ({
-    url: `https://themelon.app${route}`,
-    lastModified: new Date("2026-06-30"),
+    url: `${baseUrl}${route.path}`,
+    lastModified,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
   }));
 }
-
-

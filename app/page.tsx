@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { CTA } from "../components/CTA";
 import { FeatureCard } from "../components/FeatureCard";
@@ -40,6 +40,51 @@ const stats = [
   "Built for smarter grocery shopping",
   "Designed for families, students, and health-conscious shoppers",
 ];
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://themelon.app/#organization",
+      name: "Melon",
+      legalName: "AnyHope Corp.",
+      url: "https://themelon.app",
+      logo: "https://themelon.app/images/melon-wordmark.png",
+      contactPoint: {
+        "@type": "ContactPoint",
+        email: "support@themelon.app",
+        contactType: "customer support",
+        availableLanguage: "en",
+      },
+      sameAs: ["https://www.instagram.com/", "https://www.tiktok.com/", "https://www.linkedin.com/"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://themelon.app/#website",
+      url: "https://themelon.app",
+      name: "Melon",
+      publisher: { "@id": "https://themelon.app/#organization" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://themelon.app/#app",
+      name: "Melon",
+      applicationCategory: "HealthApplication",
+      operatingSystem: "iOS, Android",
+      url: "https://themelon.app",
+      image: "https://themelon.app/images/scan-flow-hands.png",
+      description:
+        "Melon scans food labels, explains ingredients, flags additives, and helps shoppers choose better products for their lifestyle.",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
+      publisher: { "@id": "https://themelon.app/#organization" },
+    },
+  ],
+};
 
 function ProductScreenshotCard({ src, title, body }: { src: string; title: string; body: string }) {
   return (
@@ -58,6 +103,10 @@ function ProductScreenshotCard({ src, title, body }: { src: string; title: strin
 export default function Home() {
   return (
     <main className="overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <section id="app" className="relative bg-white">
         <div className="container-page grid min-h-[calc(100vh-80px)] items-center gap-10 py-10 sm:gap-12 sm:py-16 lg:grid-cols-[0.9fr_1.1fr] lg:py-20">
           <div className="max-w-3xl">

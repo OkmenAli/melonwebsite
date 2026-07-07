@@ -1,11 +1,18 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { privacyParagraphs } from "./content";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Melon Privacy Policy for the Melon mobile application and related services.",
+  description: "Read the Melon Privacy Policy for the Melon mobile application, website, and related services.",
   alternates: { canonical: "/privacy" },
-  openGraph: { url: "https://themelon.app/privacy", title: "Melon Privacy Policy" },
+  openGraph: {
+    type: "article",
+    url: "https://themelon.app/privacy",
+    title: "Melon Privacy Policy",
+    description: "Privacy details for Melon, including data collection, use, retention, and privacy rights.",
+    siteName: "Melon",
+  },
+  robots: { index: true, follow: true },
 };
 
 function getParagraphRole(paragraph: string) {

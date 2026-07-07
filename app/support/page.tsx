@@ -1,9 +1,17 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Support",
-  description: "Melon support and legal resources.",
+  description: "Contact Melon support for account questions, privacy requests, subscriptions, product data concerns, and local source listings.",
+  alternates: { canonical: "/support" },
+  openGraph: {
+    type: "website",
+    url: "https://themelon.app/support",
+    title: "Melon Support",
+    description: "Get help with Melon account questions, privacy requests, subscriptions, product data, and local source listings.",
+    siteName: "Melon",
+  },
 };
 
 export default function SupportPage() {
