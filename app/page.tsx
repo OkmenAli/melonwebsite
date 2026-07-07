@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { FeatureCard } from "../components/FeatureCard";
 import { SectionTitle } from "../components/SectionTitle";
+import { StoreButtons } from "../components/StoreButtons";
 
 const scoringPillars = [
   {
@@ -205,7 +205,7 @@ export default function Home() {
       />
       <section className="relative bg-white">
         <div className="container-page grid min-h-[calc(88vh-80px)] items-center gap-12 py-12 sm:py-16 lg:grid-cols-[0.9fr_1.1fr] lg:py-14">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl hero-copy">
             <p className="eyebrow">Food transparency</p>
             <h1 className="mt-5 text-5xl font-black tracking-tight text-ink sm:text-7xl lg:text-8xl">
               Know what&apos;s in your food.
@@ -213,13 +213,13 @@ export default function Home() {
             <p className="mt-7 max-w-2xl text-xl leading-9 text-zinc-600">
               Melon turns labels into clear scores, ingredient explanations, additive flags, and personal guidance for healthier grocery choices.
             </p>
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <Link href="#scoring" className="inline-flex min-h-14 items-center justify-center rounded-full bg-melon-600 px-8 text-base font-black text-white shadow-card transition hover:-translate-y-0.5 hover:bg-melon-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-500">
-                See how scoring works
-              </Link>
-              <Link href="#local-sources" className="inline-flex min-h-14 items-center justify-center rounded-full border border-zinc-200 bg-white px-8 text-base font-black text-ink shadow-[0_6px_22px_rgba(17,27,21,0.06)] transition hover:-translate-y-0.5 hover:border-melon-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-500">
-                Explore local sources
-              </Link>
+            <div className="mt-9 rounded-[28px] border border-melon-100 bg-white/85 p-5 shadow-card backdrop-blur">
+              <p className="max-w-xl text-base font-bold leading-7 text-zinc-700">
+                Melon is a food label scanner for iOS and Android that scores products, explains ingredients, and surfaces dietary flags before you buy.
+              </p>
+              <div className="mt-5">
+                <StoreButtons />
+              </div>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-[36px] bg-melon-50 p-3 shadow-inner sm:rounded-[42px] sm:p-6 lg:p-8">
@@ -320,4 +320,3 @@ export default function Home() {
     </main>
   );
 }
-
