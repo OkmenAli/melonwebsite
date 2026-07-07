@@ -1,9 +1,9 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
-  { label: "App", href: "#app" },
-  { label: "Features", href: "#features" },
+  { label: "Scoring", href: "#scoring" },
+  { label: "Personalization", href: "#personalization" },
   { label: "Local Sources", href: "#local-sources" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Use", href: "/terms" },
@@ -19,7 +19,7 @@ export function Header() {
         </Link>
         <nav className="hidden items-center gap-7 text-sm font-black text-zinc-700 lg:flex" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <Link key={item.label} href={item.href} className="transition hover:text-melon-600">
+            <Link key={item.label} href={item.href} className="transition hover:text-melon-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-500">
               {item.label}
             </Link>
           ))}
@@ -27,7 +27,7 @@ export function Header() {
       </div>
       <nav className="container-page grid grid-cols-3 gap-x-4 gap-y-3 pb-4 text-center text-xs font-black text-zinc-600 lg:hidden" aria-label="Mobile navigation">
         {navItems.map((item) => (
-          <Link key={item.label} href={item.href} className="transition hover:text-melon-600">
+          <Link key={item.label} href={item.href} className="transition hover:text-melon-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-500">
             {item.label}
           </Link>
         ))}

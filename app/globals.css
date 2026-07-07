@@ -117,3 +117,48 @@ body {
 }
 
 
+
+@keyframes scan-sweep {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  20%, 70% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
+@keyframes score-breathe {
+  0%, 100% {
+    transform: scale(1);
+    filter: saturate(1);
+  }
+  50% {
+    transform: scale(1.025);
+    filter: saturate(1.12);
+  }
+}
+
+.scan-sweep {
+  position: absolute;
+  inset: 24px 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(36, 114, 61, 0.22), transparent);
+  animation: scan-sweep 5.5s ease-in-out infinite;
+}
+
+.score-breathe {
+  animation: score-breathe 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-sweep,
+  .score-breathe {
+    animation: none;
+  }
+}
