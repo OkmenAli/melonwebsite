@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FAQAccordion } from "../components/FAQAccordion";
 import { FeatureCard } from "../components/FeatureCard";
 import { SectionTitle } from "../components/SectionTitle";
 import { StoreButtons } from "../components/StoreButtons";
@@ -264,6 +265,28 @@ export default function Home() {
         </div>
       </section>
 
+
+      <section className="section-pad bg-fog">
+        <div className="container-page">
+          <SectionTitle eyebrow="Better alternatives" title="When one product falls short, Melon helps you compare the next choice." body="Melon connects score breakdowns with ingredient context so shoppers can see why one product may be worth limiting and another may be a better fit." />
+          <div className="mt-12 overflow-hidden rounded-[38px] border border-melon-100 bg-white p-3 shadow-soft sm:p-5">
+            <Image src="/images/product-alternative-comparison.png" alt="Melon comparison showing a lower-scoring Doritos product and a higher-scoring Siete sea salt chips alternative" width={1536} height={1024} className="h-auto w-full rounded-[30px]" />
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad bg-ink text-white">
+        <div className="container-page">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-melon-300">How Melon helps</p>
+            <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">Scan once. Understand everything.</h2>
+            <p className="mt-6 text-lg leading-8 text-white/70 sm:text-xl">Melon moves from product scan to additive explanation to personalized guidance, with sources and compatibility flags close at hand.</p>
+          </div>
+          <div className="mt-12 overflow-hidden rounded-[38px] border border-white/10 bg-black p-3 shadow-soft sm:p-5">
+            <Image src="/images/how-melon-helps-flow.png" alt="Three Melon screens showing product scan, additive explanation, and personalized guidance" width={1536} height={1024} className="h-auto w-full rounded-[30px]" />
+          </div>
+        </div>
+      </section>
       <section id="personalization" className="section-pad bg-melon-50">
         <div className="container-page">
           <SectionTitle eyebrow="Personal setup" title="Food clarity, made personal." body="Melon adapts label guidance to the people you shop for and the preferences you actually care about." />
@@ -315,6 +338,13 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="faq" className="section-pad bg-white">
+        <div className="container-page">
+          <SectionTitle eyebrow="Frequently Asked Questions" title="Questions shoppers ask before they scan." body="A quick guide to what Melon does, how the score works, and how to think about product guidance." />
+          <FAQAccordion />
         </div>
       </section>
     </main>
