@@ -1,10 +1,11 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 const links = [
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Use", href: "/terms" },
   { label: "Contact", href: "/support" },
+  { label: "Delete Account", href: "/delete-account" },
 ];
 
 const social = ["Instagram", "TikTok", "LinkedIn"];
