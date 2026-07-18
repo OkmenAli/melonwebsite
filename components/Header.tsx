@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
-  { label: "Scoring", href: "#scoring" },
-  { label: "Personalization", href: "#personalization" },
-  { label: "Local Sources", href: "#local-sources" },
+  { label: "Scoring", href: "/scoring-method" },
+  { label: "Personalization", href: "/#personalization" },
+  { label: "Local Sources", href: "/#local-sources" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Use", href: "/terms" },
   { label: "Contact", href: "/support" },

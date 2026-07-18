@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const baseUrl = "https://themelon.app";
-const lastModified = new Date("2026-07-14");
+const lastModified = new Date("2026-07-18");
 
 const routes: Array<{
   path: string;
@@ -9,6 +9,7 @@ const routes: Array<{
   priority: number;
 }> = [
   { path: "", changeFrequency: "weekly", priority: 1 },
+  { path: "/scoring-method", changeFrequency: "monthly", priority: 0.8 },
   { path: "/support", changeFrequency: "monthly", priority: 0.7 },
   { path: "/delete-account", changeFrequency: "yearly", priority: 0.6 },
   { path: "/privacy", changeFrequency: "yearly", priority: 0.5 },
