@@ -77,12 +77,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=melon-20260718", sizes: "48x48", type: "image/x-icon" },
-      { url: "/icon.png?v=melon-20260718", sizes: "512x512", type: "image/png" },
-      { url: "/images/icon.png?v=melon-20260718", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.png", sizes: "512x512", type: "image/png" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
     ],
-    shortcut: [{ url: "/favicon.ico?v=melon-20260718" }],
-    apple: [{ url: "/apple-icon.png?v=melon-20260718", sizes: "180x180", type: "image/png" }],
+    shortcut: [{ url: "/favicon.ico" }],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 
