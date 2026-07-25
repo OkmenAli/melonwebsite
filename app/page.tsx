@@ -102,7 +102,12 @@ export default function Home() {
             <h1 className="mt-4 text-4xl font-black leading-[0.98] tracking-tight text-ink sm:text-6xl lg:text-8xl">
               Know what&apos;s in your food.
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-600 sm:mt-7 sm:text-xl sm:leading-9">`n              Melon is a food label scanner that turns product labels into clear scores, ingredient explanations, additive flags, and personal guidance for healthier grocery choices.`n            </p>`n            <div className="mt-6 sm:mt-7">`n              <StoreButtons />`n            </div>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-600 sm:mt-7 sm:text-xl sm:leading-9">
+              Melon is a food label scanner that turns product labels into clear scores, ingredient explanations, additive flags, and personal guidance for healthier grocery choices.
+            </p>
+            <div className="mt-6 sm:mt-7">
+              <StoreButtons />
+            </div>
           </div>
           <div className="relative overflow-hidden rounded-[30px] bg-melon-50 p-3 shadow-inner sm:rounded-[42px] sm:p-6 lg:p-8">
             <div className="scan-sweep" />

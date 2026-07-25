@@ -18,7 +18,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200/80 bg-white/94 shadow-[0_1px_12px_rgba(17,27,21,0.05)] backdrop-blur-xl">
-      <div className="container-page flex min-h-16 items-center justify-between gap-6 py-3 lg:min-h-20 lg:py-4">
+      <div className="container-page relative flex min-h-16 items-center justify-center py-3 lg:min-h-20 lg:justify-between lg:gap-6 lg:py-4">
         <Link href="/" className="flex items-center" aria-label="Melon home" onClick={() => setIsMenuOpen(false)}>
           <Image src="/images/melon-wordmark.png" alt="Melon" width={176} height={56} priority className="h-auto w-32 sm:w-40 lg:w-44" />
         </Link>
@@ -31,7 +31,7 @@ export function Header() {
         </nav>
         <button
           type="button"
-          className="inline-flex size-11 items-center justify-center rounded-full border border-zinc-200 bg-white text-ink shadow-card transition hover:border-melon-200 hover:text-melon-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-500 lg:hidden"
+          className="absolute right-5 inline-flex size-11 items-center justify-center rounded-full border border-zinc-200 bg-white text-ink shadow-card transition hover:border-melon-200 hover:text-melon-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-500 lg:hidden"
           aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
