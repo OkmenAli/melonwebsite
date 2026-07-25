@@ -96,25 +96,15 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <section className="relative bg-white">
-        <div className="container-page grid min-h-[calc(88vh-80px)] items-center gap-12 py-12 sm:py-16 lg:grid-cols-[0.9fr_1.1fr] lg:py-14">
+        <div className="container-page grid items-center gap-8 py-8 sm:gap-10 sm:py-14 lg:min-h-[calc(86vh-80px)] lg:grid-cols-[0.9fr_1.1fr] lg:py-14">
           <div className="max-w-3xl hero-copy">
             <p className="eyebrow">Food transparency</p>
-            <h1 className="mt-5 text-5xl font-black tracking-tight text-ink sm:text-7xl lg:text-8xl">
+            <h1 className="mt-4 text-4xl font-black leading-[0.98] tracking-tight text-ink sm:text-6xl lg:text-8xl">
               Know what&apos;s in your food.
             </h1>
-            <p className="mt-7 max-w-2xl text-xl leading-9 text-zinc-600">
-              Melon turns labels into clear scores, ingredient explanations, additive flags, and personal guidance for healthier grocery choices.
-            </p>
-            <div className="mt-9 rounded-[28px] border border-melon-100 bg-white/85 p-5 shadow-card backdrop-blur">
-              <p className="max-w-xl text-base font-bold leading-7 text-zinc-700">
-                Melon is a food label scanner for iOS and Android that scores products, explains ingredients, and surfaces dietary flags before you buy.
-              </p>
-              <div className="mt-5">
-                <StoreButtons />
-              </div>
-            </div>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-600 sm:mt-7 sm:text-xl sm:leading-9">`n              Melon is a food label scanner that turns product labels into clear scores, ingredient explanations, additive flags, and personal guidance for healthier grocery choices.`n            </p>`n            <div className="mt-6 sm:mt-7">`n              <StoreButtons />`n            </div>
           </div>
-          <div className="relative overflow-hidden rounded-[36px] bg-melon-50 p-3 shadow-inner sm:rounded-[42px] sm:p-6 lg:p-8">
+          <div className="relative overflow-hidden rounded-[30px] bg-melon-50 p-3 shadow-inner sm:rounded-[42px] sm:p-6 lg:p-8">
             <div className="scan-sweep" />
             <Image src="/images/scan-flow-hands.png" alt="Melon scan flow from barcode to product result" width={1536} height={1024} priority className="h-auto w-full rounded-[28px] shadow-soft" />
           </div>
