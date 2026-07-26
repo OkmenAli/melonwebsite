@@ -9,7 +9,11 @@ const links = [
   { label: "Delete Account", href: "/delete-account" },
 ];
 
-const social = ["Instagram", "TikTok", "LinkedIn"];
+const social = [
+  { label: "Instagram", href: "https://www.instagram.com/themelon.app/" },
+  { label: "TikTok", href: "/support" },
+  { label: "LinkedIn", href: "/support" },
+];
 
 export function Footer() {
   return (
@@ -32,8 +36,14 @@ export function Footer() {
           <p className="text-sm font-black uppercase tracking-[0.18em] text-zinc-400">Follow</p>
           <div className="mt-4 flex flex-wrap gap-3">
             {social.map((item) => (
-              <a key={item} href="/support" className="rounded-full border border-zinc-200 px-4 py-2 text-sm font-bold text-zinc-700 transition hover:border-melon-300 hover:text-melon-700">
-                {item}
+              <a
+                key={item.label}
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="rounded-full border border-zinc-200 px-4 py-2 text-sm font-bold text-zinc-700 transition hover:border-melon-300 hover:text-melon-700"
+              >
+                {item.label}
               </a>
             ))}
           </div>
