@@ -44,7 +44,7 @@ const structuredData = {
         contactType: "customer support",
         availableLanguage: "en",
       },
-      sameAs: ["https://www.instagram.com/", "https://www.tiktok.com/", "https://www.linkedin.com/"],
+      sameAs: ["https://www.instagram.com/themelon.app/", "https://www.tiktok.com/", "https://www.linkedin.com/"],
     },
     {
       "@type": "WebSite",
@@ -98,12 +98,12 @@ export default function Home() {
       <section className="relative bg-white">
         <div className="container-page grid items-center gap-8 py-8 sm:gap-10 sm:py-14 lg:min-h-[calc(86vh-80px)] lg:grid-cols-[0.9fr_1.1fr] lg:py-14">
           <div className="max-w-3xl hero-copy">
-            <p className="eyebrow">Food transparency</p>
+            <p className="eyebrow">Scan. Learn. Choose Better.</p>
             <h1 className="mt-4 text-4xl font-black leading-[0.98] tracking-tight text-ink sm:text-6xl lg:text-8xl">
-              Know what&apos;s in your food.
+              Scan a barcode. Understand the label.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-600 sm:mt-7 sm:text-xl sm:leading-9">
-              Melon is a food label scanner that turns product labels into clear scores, ingredient explanations, additive flags, and personal guidance for healthier grocery choices.
+              See the score, ingredients, additives and dietary flags in seconds.
             </p>
             <div className="mt-6 sm:mt-7">
               <StoreButtons />
@@ -119,7 +119,7 @@ export default function Home() {
       <section className="section-pad bg-white">
         <div className="container-page grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
-            <SectionTitle align="left" eyebrow="Ingredient clarity" title="Melon explains the label, not just the number." body="Scores are supported by ingredient breakdowns, additive summaries, nutrition highlights, and better-choice suggestions so shoppers can make a decision with context." />
+            <SectionTitle align="left" eyebrow="After a scan" title="What Melon shows you." body="The product page is organized around the decisions people make in the grocery aisle." />
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
                 ["Nutrition", "See which nutrients are helping or hurting the score."],
@@ -132,8 +132,8 @@ export default function Home() {
             </div>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
-            <ProductScreenshotCard src="/images/maltesers-score.png" title="Instant score" body="Melon summarizes product fit, dietary conflicts, and the main reason a product is not recommended." />
-            <ProductScreenshotCard src="/images/maltesers-findings.png" title="Better choices" body="Key findings and alternative products help shoppers understand the next best option." />
+            <ProductScreenshotCard src="/images/maltesers-score.png" title="Product score" body="See the score, preference flags and the main reason Melon marked the product." />
+            <ProductScreenshotCard src="/images/maltesers-findings.png" title="Reasons and options" body="Key findings and alternatives make it easier to decide what to buy next." />
           </div>
         </div>
       </section>
@@ -141,28 +141,37 @@ export default function Home() {
 
       <section className="section-pad bg-fog">
         <div className="container-page">
-          <SectionTitle eyebrow="Better alternatives" title="When one product falls short, Melon helps you compare the next choice." body="Melon connects score breakdowns with ingredient context so shoppers can see why one product may be worth limiting and another may be a better fit." />
+          <SectionTitle eyebrow="Product comparison" title="See why it scored that way." body="Compare products side by side with the score, ingredients and additives in view." />
           <div className="mt-12 overflow-hidden rounded-[38px] border border-melon-100 bg-white p-3 shadow-soft sm:p-5">
             <Image src="/images/product-alternative-comparison.png" alt="Melon comparison showing a lower-scoring Doritos product and a higher-scoring Siete sea salt chips alternative" width={1536} height={1024} className="h-auto w-full rounded-[30px]" />
           </div>
         </div>
       </section>
 
-      <section className="section-pad bg-ink text-white">
+      <section id="how-it-works" className="section-pad bg-ink text-white">
         <div className="container-page">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.22em] text-melon-300">How Melon helps</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">Scan once. Understand everything.</h2>
-            <p className="mt-6 text-lg leading-8 text-white/70 sm:text-xl">Melon moves from product scan to additive explanation to personalized guidance, with sources and compatibility flags close at hand.</p>
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-melon-300">How it works</p>
+            <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">Scan. Understand. Decide.</h2>
           </div>
-          <div className="mt-12 overflow-hidden rounded-[38px] border border-white/10 bg-black p-3 shadow-soft sm:p-5">
-            <Image src="/images/how-melon-helps-flow.png" alt="Three Melon screens showing product scan, additive explanation, and personalized guidance" width={1536} height={1024} className="h-auto w-full rounded-[30px]" />
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {[
+              ["1", "Scan", "Scan the product barcode."],
+              ["2", "Understand", "See the score, ingredients and additives."],
+              ["3", "Decide", "Check whether it fits your preferences."],
+            ].map(([number, title, body]) => (
+              <article key={title} className="rounded-[24px] border border-white/12 bg-white/[0.04] p-6">
+                <div className="grid size-12 place-items-center rounded-full bg-melon-500 text-lg font-black text-white">{number}</div>
+                <h3 className="mt-6 text-2xl font-black text-white">{title}</h3>
+                <p className="mt-3 text-base leading-7 text-white/70">{body}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
       <section id="personalization" className="section-pad bg-melon-50">
         <div className="container-page">
-          <SectionTitle eyebrow="Personal setup" title="Food clarity, made personal." body="Melon adapts label guidance to the people you shop for and the preferences you actually care about." />
+          <SectionTitle eyebrow="Preferences" title="Set your food preferences once." body="Melon uses your choices to flag products that may not match your diet, allergies or religious food preferences." />
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {onboardingScreens.map(([src, title, body]) => (
               <ProductScreenshotCard key={src} src={src} title={title} body={body} />
@@ -203,7 +212,7 @@ export default function Home() {
 
       <section className="section-pad bg-fog">
         <div className="container-page">
-          <SectionTitle eyebrow="Trust by design" title="Built for smarter grocery shopping." body="Melon is for people who want food decisions to feel less confusing, whether they are shopping for themselves, their families, or a specific lifestyle." />
+          <SectionTitle eyebrow="Built for the aisle" title="Less guessing while you shop." body="Melon keeps the product page focused on the score, the label and the preferences that matter at checkout." />
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat} className="rounded-card border border-zinc-200 bg-white p-8 text-center shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft">
@@ -216,7 +225,7 @@ export default function Home() {
 
       <section id="faq" className="section-pad bg-white">
         <div className="container-page">
-          <SectionTitle eyebrow="Frequently Asked Questions" title="Questions shoppers ask before they scan." body="A quick guide to what Melon does, how the score works, and how to think about product guidance." />
+          <SectionTitle eyebrow="Frequently Asked Questions" title="Questions before you scan." body="What Melon does, how scoring works and what to do when product data is missing." />
           <FAQAccordion />
         </div>
       </section>
