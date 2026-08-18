@@ -1,3 +1,4 @@
+const APP_STORE_URL = "https://apps.apple.com/us/app/melon-know-your-food/id6792938438";
 const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.anyhopecorp.melon";
 
 function AppleIcon() {
@@ -22,10 +23,10 @@ function PlayIcon() {
 export function StoreButtons() {
   return (
     <div className="grid max-w-xl grid-cols-1 gap-3 min-[390px]:grid-cols-2 sm:flex sm:flex-row">
-      <a className="download-badge" href="/support" aria-label="Melon coming soon on the App Store">
+      <a className="download-badge" href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" aria-label="Download Melon on the App Store">
         <AppleIcon />
         <span>
-          <span className="store-kicker">Coming soon on the</span>
+          <span className="store-kicker">Download on the</span>
           <span className="store-name">App Store</span>
         </span>
       </a>
