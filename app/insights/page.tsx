@@ -435,16 +435,16 @@ export default function InsightsPage() {
             </section>
 
             <section className="rounded-[28px] bg-ink p-7 text-white sm:p-8">
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-melon-300">Explore Melon</p>
-              <h2 className="mt-4 text-3xl font-black tracking-tight">Scan labels with more context.</h2>
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-melon-300">More Melon Insights</p>
+              <h2 className="mt-4 text-3xl font-black tracking-tight">Next: why ultra-processed foods can be easy to overeat.</h2>
               <p className="mt-4 max-w-2xl text-base leading-7 text-white/70">
-                Melon explains ingredients, additive signals, dietary compatibility, and product scores so you can make more informed grocery choices.
+                Read how a controlled NIH study found that food processing can influence calorie intake, eating speed, and short-term weight change.
               </p>
               <Link
-                href="/scoring-method"
+                href="/insights/ultra-processed-foods-overeating"
                 className="mt-6 inline-flex rounded-full bg-melon-500 px-6 py-3 text-sm font-black text-white shadow-card transition hover:bg-melon-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-300"
               >
-                See Melon scoring
+                Read the ultra-processed food article
               </Link>
             </section>
           </div>

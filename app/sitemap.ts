@@ -10,6 +10,7 @@ const routes: Array<{
 }> = [
   { path: "", changeFrequency: "weekly", priority: 1 },
   { path: "/insights", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/insights/ultra-processed-foods-overeating", changeFrequency: "weekly", priority: 0.85 },
   { path: "/scoring-method", changeFrequency: "monthly", priority: 0.8 },
   { path: "/support", changeFrequency: "monthly", priority: 0.7 },
   { path: "/delete-account", changeFrequency: "yearly", priority: 0.6 },
