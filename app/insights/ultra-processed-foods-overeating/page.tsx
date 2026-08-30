@@ -205,29 +205,19 @@ export default function UltraProcessedFoodsOvereatingPage() {
 
       <article>
         <header className="overflow-hidden bg-ink text-white">
-          <div className="container-page grid gap-10 py-16 sm:py-20 lg:grid-cols-[0.9fr_0.82fr] lg:items-center lg:py-24">
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.22em] text-melon-300">Melon Insights</p>
-              <h1 className="mt-5 max-w-4xl text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Why ultra-processed foods can be easy to overeat.
-              </h1>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-white/72 sm:text-xl">
-                A controlled NIH study found that people ate more calories and gained weight on an ultra-processed diet, even when major nutrition numbers looked similar on paper.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3 text-sm font-black text-white/78">
-                <span className="rounded-full border border-white/15 bg-white/8 px-4 py-2">Food processing</span>
-                <span className="rounded-full border border-white/15 bg-white/8 px-4 py-2">NIH study</span>
-                <span className="rounded-full border border-white/15 bg-white/8 px-4 py-2">7 min read</span>
-              </div>
+          <div className="container-page py-16 sm:py-20 lg:py-24">
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-melon-300">Melon Insights</p>
+            <h1 className="mt-5 max-w-4xl text-5xl font-black tracking-tight text-white sm:text-6xl">
+              Why ultra-processed foods can be easy to overeat.
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-white/72 sm:text-xl">
+              A controlled NIH study found that people ate more calories and gained weight on an ultra-processed diet, even when major nutrition numbers looked similar on paper.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3 text-sm font-black text-white/78">
+              <span className="rounded-full border border-white/15 bg-white/8 px-4 py-2">Food processing</span>
+              <span className="rounded-full border border-white/15 bg-white/8 px-4 py-2">NIH study</span>
+              <span className="rounded-full border border-white/15 bg-white/8 px-4 py-2">7 min read</span>
             </div>
-            <aside className="rounded-[28px] border border-white/12 bg-white/8 p-6 shadow-[0_28px_90px_rgba(0,0,0,0.25)] backdrop-blur">
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-melon-300">Key finding</p>
-              <p className="mt-4 text-5xl font-black tracking-tight text-white">508</p>
-              <p className="mt-2 text-2xl font-black tracking-tight text-white">more calories per day</p>
-              <p className="mt-4 text-base leading-7 text-white/70">
-                Participants consumed about 508 additional calories per day on the ultra-processed diet and gained about 0.9 kilograms over two weeks.
-              </p>
-            </aside>
           </div>
         </header>
 
@@ -476,7 +466,7 @@ export default function UltraProcessedFoodsOvereatingPage() {
                 Learn what mono- and diglycerides are, why food companies use them, and how Melon interprets source uncertainty.
               </p>
               <Link
-                href="/insights"
+                href="/insights/mono-and-diglycerides-e471"
                 className="mt-6 inline-flex rounded-full bg-melon-500 px-6 py-3 text-sm font-black text-white shadow-card transition hover:bg-melon-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-300"
               >
                 Read the E471 article
