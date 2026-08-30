@@ -9,6 +9,7 @@ const navItems = [
   { label: "Personalization", href: "/#personalization" },
   { label: "Local Sources", href: "/#local-sources" },
   { label: "Scoring", href: "/scoring-method" },
+  { label: "Insights", href: "/insights" },
   { label: "Support", href: "/support" },
 ];
 

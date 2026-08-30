@@ -6,6 +6,7 @@ const links = [
   { label: "Terms of Use", href: "/terms" },
   { label: "Contact", href: "/support" },
   { label: "Scoring Method", href: "/scoring-method" },
+  { label: "Insights", href: "/insights" },
   { label: "Delete Account", href: "/delete-account" },
 ];
 
