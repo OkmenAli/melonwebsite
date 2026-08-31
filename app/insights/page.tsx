@@ -8,7 +8,6 @@ const articles = [
   {
     title: "Mono- and Diglycerides: What E471 Means on Food Labels",
     href: "/insights/mono-and-diglycerides-e471",
-    category: "Food additives",
     readTime: "6 min read",
     description:
       "What this common emulsifier does, why it appears in packaged foods, and what current research can and cannot tell us.",
@@ -23,7 +22,6 @@ const articles = [
   {
     title: "Why Ultra-Processed Foods Can Be Easy to Overeat",
     href: "/insights/ultra-processed-foods-overeating",
-    category: "Food processing",
     readTime: "7 min read",
     description:
       "A closer look at the NIH controlled diet study and what it suggests about calories, eating speed, and food formulation.",
@@ -78,7 +76,6 @@ export default function InsightsPage() {
       "@type": "Article",
       headline: article.title,
       url: `https://themelon.app${article.href}`,
-      about: article.category,
       citation: article.sources,
     })),
   };
@@ -110,24 +107,11 @@ export default function InsightsPage() {
                 href={article.href}
                 className="group flex h-full flex-col rounded-[28px] border border-zinc-200 bg-white p-6 shadow-card transition hover:-translate-y-1 hover:border-melon-200 hover:shadow-[0_28px_70px_rgba(17,27,21,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-500 sm:p-7"
               >
-                <div className="flex flex-wrap items-center gap-3 text-xs font-black uppercase tracking-[0.16em]">
-                  <span className="rounded-full bg-melon-50 px-3 py-2 text-melon-700">{article.category}</span>
-                  <span className="text-zinc-400">{article.readTime}</span>
-                </div>
-                <h2 className="mt-6 text-3xl font-black tracking-tight text-ink transition group-hover:text-melon-800 sm:text-4xl">
+                <p className="text-sm font-black uppercase tracking-[0.16em] text-zinc-400">{article.readTime}</p>
+                <h2 className="mt-5 text-3xl font-black tracking-tight text-ink transition group-hover:text-melon-800 sm:text-4xl">
                   {article.title}
                 </h2>
                 <p className="mt-4 text-base leading-7 text-zinc-600">{article.description}</p>
-                <div className="mt-8 border-t border-zinc-200 pt-5">
-                  <p className="text-xs font-black uppercase tracking-[0.18em] text-zinc-400">Sources cited</p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {article.sources.map((source) => (
-                      <span key={source} className="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-2 text-sm font-bold text-zinc-700">
-                        {source}
-                      </span>
-                    ))}
-                  </div>
-                </div>
                 <span className="mt-8 inline-flex text-sm font-black text-melon-700 transition group-hover:translate-x-1">
                   Read full article
                 </span>
