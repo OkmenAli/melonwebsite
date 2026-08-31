@@ -13,8 +13,6 @@ const navItems = [
   { label: "Support", href: "/support" },
 ];
 
-const playStoreUrl = "https://play.google.com/store/apps/details?id=com.anyhopecorp.melon";
-
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -30,14 +28,6 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <a
-            href={playStoreUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-melon-600 px-5 py-3 text-sm font-black text-white shadow-card transition hover:bg-melon-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-500"
-          >
-            Download Melon
-          </a>
         </nav>
         <button
           type="button"
@@ -70,15 +60,6 @@ export function Header() {
             {item.label}
           </Link>
         ))}
-        <a
-          href={playStoreUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-2xl bg-melon-600 px-4 py-3 text-center text-white transition hover:bg-melon-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-500"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Download Melon
-        </a>
       </nav>
     </header>
   );
