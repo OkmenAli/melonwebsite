@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Melon",
     images: [
       {
-        url: "/images/scan-flow-hands.png",
+        url: "/images/scan-flow-cereal.png",
         width: 1536,
         height: 1024,
         alt: "Melon app scanning a food label and showing product insights",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Melon Insights | Melon",
     description,
-    images: ["/images/scan-flow-hands.png"],
+    images: ["/images/scan-flow-cereal.png"],
   },
   robots: { index: true, follow: true },
 };

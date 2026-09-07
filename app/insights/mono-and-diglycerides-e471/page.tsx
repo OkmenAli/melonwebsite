@@ -124,7 +124,7 @@ export const metadata: Metadata = {
     authors: ["AnyHope Corp."],
     images: [
       {
-        url: "/images/scan-flow-hands.png",
+        url: "/images/scan-flow-cereal.png",
         width: 1536,
         height: 1024,
         alt: "Melon app scanning a food label and showing ingredient insights",
@@ -135,7 +135,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/images/scan-flow-hands.png"],
+    images: ["/images/scan-flow-cereal.png"],
   },
   robots: { index: true, follow: true },
 };
@@ -195,7 +195,7 @@ export default function InsightsPage() {
       },
     },
     mainEntityOfPage: articleUrl,
-    image: "https://themelon.app/images/scan-flow-hands.png",
+    image: "https://themelon.app/images/scan-flow-cereal.png",
   };
 
   const faqSchema = {

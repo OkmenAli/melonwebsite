@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     images: [
       {
-        url: "/images/scan-flow-hands.png",
+        url: "/images/scan-flow-cereal.png",
         width: 1536,
         height: 1024,
         alt: "Melon app scanning a food label and showing a product score",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Melon | Know what's in your food",
     description: siteDescription,
-    images: ["/images/scan-flow-hands.png"],
+    images: ["/images/scan-flow-cereal.png"],
   },
   robots: {
     index: true,

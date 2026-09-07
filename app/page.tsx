@@ -61,7 +61,7 @@ const structuredData = {
       applicationCategory: "HealthApplication",
       operatingSystem: "iOS, Android",
       url: "https://themelon.app",
-      image: "https://themelon.app/images/scan-flow-hands.png",
+      image: "https://themelon.app/images/scan-flow-cereal.png",
       description:
         "Melon scans food labels, explains ingredients, flags additives, and helps shoppers choose better products for their lifestyle.",
       offers: {
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
           <div className="relative overflow-hidden rounded-[30px] bg-melon-50 p-3 shadow-inner sm:rounded-[42px] sm:p-6 lg:p-8">
             <div className="scan-sweep" />
-            <Image src="/images/scan-flow-hands.png" alt="Melon scan flow from barcode to product result" width={1536} height={1024} priority className="h-auto w-full rounded-[28px] shadow-soft" />
+            <Image src="/images/scan-flow-cereal.png" alt="Melon scan flow from barcode to product result" width={1536} height={1024} priority className="h-auto w-full rounded-[28px] shadow-soft" />
           </div>
         </div>
       </section>
