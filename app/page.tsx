@@ -200,12 +200,12 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-12 flex justify-center">
-            <div className="w-full max-w-[560px] rounded-[36px] bg-white p-3 shadow-soft">
+            <div className="w-full max-w-6xl rounded-[36px] bg-white p-3 shadow-soft">
               <Image
                 src="/images/local-sources-screen.png"
                 alt="Melon Local Sources map showing nearby ranches, filters, and local food results"
-                width={710}
-                height={1536}
+                width={1680}
+                height={945}
                 className="h-auto w-full rounded-[28px]"
               />
             </div>
