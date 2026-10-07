@@ -199,12 +199,15 @@ export default function Home() {
               </span>
             ))}
           </div>
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-[36px] bg-white p-3 shadow-soft">
-              <Image src="/images/local-filters.png" alt="Melon Local Sources filters" width={1182} height={1006} className="h-auto w-full rounded-[28px]" />
-            </div>
-            <div className="rounded-[36px] bg-white p-3 shadow-soft">
-              <Image src="/images/local-map.png" alt="Melon Local Sources map results" width={946} height={2048} className="mx-auto h-auto max-h-[900px] w-auto rounded-[28px]" />
+          <div className="mt-12 flex justify-center">
+            <div className="w-full max-w-[560px] rounded-[36px] bg-white p-3 shadow-soft">
+              <Image
+                src="/images/local-sources-screen.png"
+                alt="Melon Local Sources map showing nearby ranches, filters, and local food results"
+                width={710}
+                height={1536}
+                className="h-auto w-full rounded-[28px]"
+              />
             </div>
           </div>
         </div>
