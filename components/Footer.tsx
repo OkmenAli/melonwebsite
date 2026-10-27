@@ -21,8 +21,15 @@ const groups = [
 
 export function Footer() {
   return (
-    <footer className="overflow-hidden border-t border-zinc-100 bg-white">
-      <div className="container-page relative z-10 grid gap-10 pt-14 sm:pt-16 lg:grid-cols-[1.3fr_1.7fr] lg:gap-x-16">
+    <footer className="relative isolate overflow-hidden border-t border-zinc-100 bg-[#f9fcfa]">
+      <Image
+        src="/images/melon-footer-minimal.png"
+        alt=""
+        fill
+        sizes="100vw"
+        className="pointer-events-none -z-10 object-cover object-bottom"
+      />
+      <div className="container-page relative grid gap-7 pb-48 pt-10 sm:pb-44 sm:pt-12 lg:min-h-[440px] lg:grid-cols-[1.3fr_1.7fr] lg:gap-x-16">
         <div>
           <Link href="/" aria-label="Melon home" className="inline-block">
             <Image src="/images/melon-wordmark.png" alt="Melon" width={220} height={70} className="h-auto w-44 sm:w-52" />
@@ -30,7 +37,6 @@ export function Footer() {
           <div className="mt-6 [&_.download-badge]:min-w-0 [&_.download-badge]:gap-2 [&_.download-badge]:rounded-lg [&_.download-badge]:px-3 [&_.download-badge]:py-2 [&_.store-name]:text-xl [&_.store-kicker]:text-[10px] [&_.store-kicker]:tracking-normal">
             <StoreButtons />
           </div>
-          <p className="mt-5 text-sm text-zinc-500">Know your food. Find your community.</p>
         </div>
         <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3">
           {groups.map((group) => (
@@ -49,9 +55,6 @@ export function Footer() {
           ))}
         </div>
         <p className="text-xs text-zinc-500 lg:col-span-2">AnyHope Corp. operating as Melon</p>
-      </div>
-      <div aria-hidden="true" className="relative mt-4 h-40 sm:h-52 lg:h-64">
-        <Image src="/images/melon-footer-landscape.png" alt="" fill sizes="100vw" className="object-cover object-bottom" style={{ maskImage: "linear-gradient(to bottom, transparent, black 18%)" }} />
       </div>
     </footer>
   );
