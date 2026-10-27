@@ -5,11 +5,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Our Mission", href: "/our-mission" },
-  { label: "How it works", href: "/#how-it-works" },
-  { label: "Personalization", href: "/#personalization" },
-  { label: "Local Sources", href: "/local-sources" },
   { label: "Scoring", href: "/scoring-method" },
+  { label: "Our Mission", href: "/our-mission" },
   { label: "Insights", href: "/insights" },
   { label: "Support", href: "/support" },
 ];
