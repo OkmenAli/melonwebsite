@@ -114,24 +114,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-pad bg-white">
-        <div className="container-page grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-          <div>
-            <SectionTitle align="left" eyebrow="After a scan" title="What Melon shows you." body="The product page is organized around the decisions people make in the grocery aisle." />
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {[
-                ["Nutrition", "See which nutrients are helping or hurting the score."],
-                ["Additives", "Review additive risk levels and plain-language explanations."],
-                ["Processing", "Understand ultra-processed signals and ingredient complexity."],
-                ["Alternatives", "Compare better choices when a product falls short."],
-              ].map(([title, body]) => (
-                <FeatureCard key={title} title={title} body={body} />
-              ))}
-            </div>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2">
-            <ProductScreenshotCard src="/images/maltesers-score.png" title="Product score" body="See the score, preference flags and the main reason Melon marked the product." />
-            <ProductScreenshotCard src="/images/maltesers-findings.png" title="Reasons and options" body="Key findings and alternatives make it easier to decide what to buy next." />
+      <section aria-labelledby="scan-results-heading" className="bg-white py-16 sm:py-24">
+        <div className="container-page">
+          <header className="mx-auto max-w-2xl text-center">
+            <h2 id="scan-results-heading" className="text-3xl font-bold leading-tight text-ink sm:text-4xl">What Melon shows you.</h2>
+            <p className="mt-4 text-lg leading-8 text-zinc-600">Understand the score. See what matters to you.</p>
+          </header>
+          <div className="mx-auto mt-12 grid max-w-4xl gap-16 sm:mt-16 md:grid-cols-2 md:gap-20">
+            {[
+              { src: "/images/maltesers-score.png", title: "Understand the score", body: "See how nutrition, additives, and processing shape the result, alongside your dietary flags.", alt: "Melon product result showing a score, dietary flags, and nutrition, additive, and processing breakdown" },
+              { src: "/images/maltesers-findings.png", title: "See your options", body: "Read the key concerns and positives, then explore alternatives that may better fit your preferences.", alt: "Melon product findings with concerns, positives, and alternative products" },
+            ].map(({ src, title, body, alt }) => (
+              <figure key={src} className="min-w-0">
+                <Image src={src} alt={alt} width={582} height={992} sizes="(max-width: 768px) 280px, 300px" className="mx-auto h-auto w-full max-w-[280px] sm:max-w-[300px]" />
+                <figcaption className="mx-auto mt-8 max-w-sm text-center">
+                  <h3 className="text-xl font-bold text-ink">{title}</h3>
+                  <p className="mt-3 text-base leading-7 text-zinc-600">{body}</p>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
