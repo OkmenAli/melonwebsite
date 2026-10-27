@@ -114,23 +114,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-labelledby="scan-results-heading" className="bg-white py-16 sm:py-24">
+      <section aria-labelledby="scan-results-heading" className="bg-black py-12 sm:py-16">
         <div className="container-page">
-          <header className="mx-auto max-w-2xl text-center">
+          <header className="sr-only">
             <h2 id="scan-results-heading" className="text-3xl font-bold leading-tight text-ink sm:text-4xl">What Melon shows you.</h2>
             <p className="mt-4 text-lg leading-8 text-zinc-600">Understand the score. See what matters to you.</p>
           </header>
-          <div className="mx-auto mt-12 grid max-w-4xl gap-16 sm:mt-16 md:grid-cols-2 md:gap-20">
+          <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-3 lg:gap-6">
             {[
-              { src: "/images/maltesers-score.png", title: "Understand the score", body: "See how nutrition, additives, and processing shape the result, alongside your dietary flags.", alt: "Melon product result showing a score, dietary flags, and nutrition, additive, and processing breakdown" },
-              { src: "/images/maltesers-findings.png", title: "See your options", body: "Read the key concerns and positives, then explore alternatives that may better fit your preferences.", alt: "Melon product findings with concerns, positives, and alternative products" },
-            ].map(({ src, title, body, alt }) => (
+              { src: "/images/melon-scan-explainer.png", alt: "Step 1: Scan the product. Melon shows the product score, dietary flags, ingredient concerns, and additives." },
+              { src: "/images/melon-additive-explainer.png", alt: "Step 2: Melon explains. Explore additive risk levels, plain-language explanations, and potential concerns." },
+              { src: "/images/melon-personal-guidance.png", alt: "Step 3: Personalized guidance. Review dietary compatibility, pregnancy and children considerations, and scientific sources." },
+            ].map(({ src, alt }) => (
               <figure key={src} className="min-w-0">
-                <Image src={src} alt={alt} width={582} height={992} sizes="(max-width: 768px) 280px, 300px" className="mx-auto h-auto w-full max-w-[280px] sm:max-w-[300px]" />
-                <figcaption className="mx-auto mt-8 max-w-sm text-center">
-                  <h3 className="text-xl font-bold text-ink">{title}</h3>
-                  <p className="mt-3 text-base leading-7 text-zinc-600">{body}</p>
-                </figcaption>
+                <Image src={src} alt={alt} width={1200} height={1440} sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1024px) 600px, 368px" className="mx-auto h-auto w-full max-w-[600px]" />
               </figure>
             ))}
           </div>
