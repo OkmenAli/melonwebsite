@@ -20,8 +20,6 @@ const insightCards = [
   ["Seed oil concerns", "Call out common seed oils when they appear in ingredient lists."],
 ];
 
-const localItems = ["Local farms", "Butchers", "Halal markets", "Kosher markets", "Farmers markets", "Honey", "Eggs", "Milk", "Seed-oil-free restaurants"];
-
 const stats = [
   "Food labels translated into plain language",
   "Scores weighted across nutrition, additives, and processing",
@@ -181,34 +179,6 @@ export default function Home() {
             {insightCards.map(([title, body]) => (
               <FeatureCard key={title} title={title} body={body} />
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="local-sources" className="section-pad bg-ink text-white">
-        <div className="container-page">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.22em] text-melon-300">Local Sources</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">Discover healthier local options.</h2>
-            <p className="mt-6 text-lg leading-8 text-white/70 sm:text-xl">Melon helps users filter nearby farms, butchers, halal markets, kosher markets, farmers markets, honey, eggs, milk, and seed-oil-free restaurants.</p>
-          </div>
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            {localItems.map((item) => (
-              <span key={item} className="rounded-full border border-white/10 bg-white/7 px-4 py-3 text-sm font-black text-white">
-                {item}
-              </span>
-            ))}
-          </div>
-          <div className="mt-12 flex justify-center">
-            <div className="w-full max-w-6xl rounded-[36px] bg-white p-3 shadow-soft">
-              <Image
-                src="/images/local-sources-screen.png"
-                alt="Melon Local Sources map showing nearby ranches, filters, and local food results"
-                width={1680}
-                height={945}
-                className="h-auto w-full rounded-[28px]"
-              />
-            </div>
           </div>
         </div>
       </section>

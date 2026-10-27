@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
+  { label: "Local Sources", href: "/local-sources" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Use", href: "/terms" },
   { label: "Contact", href: "/support" },
