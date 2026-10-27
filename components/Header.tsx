@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navItems = [
+  { label: "Our Mission", href: "/our-mission" },
   { label: "How it works", href: "/#how-it-works" },
   { label: "Personalization", href: "/#personalization" },
   { label: "Local Sources", href: "/local-sources" },
@@ -22,7 +23,7 @@ export function Header() {
         <Link href="/" className="flex items-center" aria-label="Melon home" onClick={() => setIsMenuOpen(false)}>
           <Image src="/images/melon-wordmark.png" alt="Melon" width={176} height={56} priority className="h-auto w-32 sm:w-40 lg:w-44" />
         </Link>
-        <nav className="hidden items-center gap-7 text-sm font-black text-zinc-700 lg:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-4 text-sm font-black text-zinc-700 lg:flex xl:gap-7" aria-label="Primary navigation">
           {navItems.map((item) => (
             <Link key={item.label} href={item.href} className="transition hover:text-melon-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-500">
               {item.label}
