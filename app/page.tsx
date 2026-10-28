@@ -114,23 +114,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-labelledby="scan-results-heading" className="bg-black py-12 sm:py-16">
-        <div className="container-page">
+      <section aria-labelledby="scan-results-heading" className="bg-black py-6 sm:py-10">
+        <div className="mx-auto w-full max-w-[1720px]">
           <header className="sr-only">
             <h2 id="scan-results-heading" className="text-3xl font-bold leading-tight text-ink sm:text-4xl">What Melon shows you.</h2>
             <p className="mt-4 text-lg leading-8 text-zinc-600">Understand the score. See what matters to you.</p>
           </header>
-          <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-3 lg:gap-6">
-            {[
-              { src: "/images/melon-scan-explainer.png", alt: "Step 1: Scan the product. Melon shows the product score, dietary flags, ingredient concerns, and additives." },
-              { src: "/images/melon-additive-explainer.png", alt: "Step 2: Melon explains. Explore additive risk levels, plain-language explanations, and potential concerns." },
-              { src: "/images/melon-personal-guidance.png", alt: "Step 3: Personalized guidance. Review dietary compatibility, pregnancy and children considerations, and scientific sources." },
-            ].map(({ src, alt }) => (
-              <figure key={src} className="min-w-0">
-                <Image src={src} alt={alt} width={1200} height={1440} sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1024px) 600px, 368px" className="mx-auto h-auto w-full max-w-[600px]" />
-              </figure>
-            ))}
-          </div>
+          <Image
+            src="/images/melon-how-it-helps-banner.png"
+            alt="How Melon helps: scan a product to see its score and additives, explore ingredient explanations, and review personalized dietary guidance and scientific sources."
+            width={1720}
+            height={704}
+            sizes="(max-width: 1720px) 100vw, 1720px"
+            className="h-auto w-full"
+          />
         </div>
       </section>
 
