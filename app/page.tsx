@@ -121,10 +121,10 @@ export default function Home() {
             <p className="mt-4 text-lg leading-8 text-zinc-600">Understand the score. See what matters to you.</p>
           </header>
           <Image
-            src="/images/melon-how-it-helps-banner.png"
+            src="/images/melon-how-it-helps-v2.png"
             alt="How Melon helps: scan a product to see its score and additives, explore ingredient explanations, and review personalized dietary guidance and scientific sources."
-            width={1720}
-            height={704}
+            width={1725}
+            height={912}
             sizes="(max-width: 1720px) 100vw, 1720px"
             className="h-auto w-full"
           />
