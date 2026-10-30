@@ -94,23 +94,21 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <section className="relative bg-white">
-        <div className="container-page grid items-center gap-8 py-8 sm:gap-10 sm:py-14 lg:min-h-[calc(86vh-80px)] lg:grid-cols-[0.9fr_1.1fr] lg:py-14">
-          <div className="max-w-3xl hero-copy">
-            <p className="eyebrow">Scan. Learn. Choose Better.</p>
-            <h1 className="mt-4 text-4xl font-black leading-[0.98] tracking-tight text-ink sm:text-6xl lg:text-8xl">
-              Scan a barcode. Understand the label.
+        <div className="container-page grid items-center gap-10 py-10 sm:py-14 lg:grid-cols-[1.1fr_1fr] lg:gap-6 lg:py-16">
+          <div className="min-w-0">
+            <p className="text-xs font-semibold uppercase tracking-normal text-melon-700">Scan. Learn. Choose Better.</p>
+            <h1 className="mt-5 text-[30px] font-semibold leading-[1.15] tracking-normal text-zinc-900 min-[390px]:text-[36px] sm:text-[40px] lg:text-[48px] xl:text-[56px]">
+              <span className="block">Scan a barcode.</span>
+              <span className="block text-melon-700">Understand the label.</span>
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-600 sm:mt-7 sm:text-xl sm:leading-9">
+            <p className="mt-6 max-w-md text-lg leading-8 text-zinc-600 sm:text-xl">
               See the score, ingredients, additives and dietary flags in seconds.
             </p>
             <div className="mt-6 sm:mt-7">
               <StoreButtons />
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-[30px] bg-melon-50 p-3 shadow-inner sm:rounded-[42px] sm:p-6 lg:p-8">
-            <div className="scan-sweep" />
-            <Image src="/images/scan-flow-cereal.png" alt="Melon scan flow from barcode to product result" width={1536} height={1024} priority className="h-auto w-full rounded-[28px] shadow-soft" />
-          </div>
+          <Image src="/images/melon-hero-phone-mascot.png" alt="Melon mascot leaning against a diagonal phone showing a food product score, ingredients, and dietary flags" width={1312} height={1199} sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1024px) 560px, 580px" priority className="mx-auto h-auto w-full max-w-[560px] lg:max-w-none" />
         </div>
       </section>
 

@@ -48,7 +48,7 @@ body {
   }
 
   .download-badge {
-    @apply inline-flex min-h-14 items-center gap-3 rounded-2xl bg-ink px-5 py-3 text-left text-white shadow-card transition hover:-translate-y-0.5 hover:bg-black;
+    @apply inline-flex min-h-14 items-center gap-3 rounded-2xl bg-ink px-5 py-3 text-left text-white shadow-card transition hover:-translate-y-0.5 hover:bg-melon-700 focus-visible:bg-melon-700;
   }
 
   .store-kicker {
