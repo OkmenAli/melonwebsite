@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Dancing_Script } from "next/font/google";
 import { FAQAccordion } from "../components/FAQAccordion";
 import { FeatureCard } from "../components/FeatureCard";
 import { SectionTitle } from "../components/SectionTitle";
 import { StoreButtons } from "../components/StoreButtons";
+
+const independenceFont = Dancing_Script({ subsets: ["latin"], weight: "500", display: "swap" });
 
 const onboardingScreens = [
   ["/images/onboarding-shopping-for.png", "Household context", "Melon learns whether you shop for yourself, children, pregnancy, or family needs."],
@@ -120,18 +123,18 @@ export default function Home() {
         <div className="container-page">
           <header className="mx-auto max-w-2xl text-center">
             <h2 id="independence-heading" className="text-3xl font-semibold leading-tight text-zinc-900 sm:text-4xl">Independent by design.</h2>
-            <p className="mt-5 text-lg leading-8 text-zinc-600">Melon is an independent project built to help you understand your food, not to promote a brand.</p>
+            <p className="mt-5 text-lg leading-8 text-zinc-600">Built for people, not brands.</p>
           </header>
           <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-12">
             {[
-              ["No brand influence", "Brands and manufacturers do not determine Melon's scores or product assessments. Our focus is the food information that matters to you."],
-              ["Scores with explanations", "We bring nutrition, additives, and processing together with explanations, so you can understand what contributes to each result."],
-              ["Your choices come first", "Food choices are personal. Melon gives you information to explore according to your needs and values, without telling you what to eat."],
-            ].map(([title, body]) => (
+              ["No brand influence", "Brands and manufacturers don't determine our scores."],
+              ["Clear explanations", "Understand what goes into every Melon Score."],
+              ["Your food, your choice", "We inform your choices, never tell you what to eat."],
+            ].map(([title, body], index) => (
               <article key={title} className="text-center">
-                <div aria-hidden="true" className="mx-auto mb-6 h-1 w-10 bg-melon-300" />
-                <h3 className="text-xl font-semibold text-melon-700">{title}</h3>
-                <p className="mx-auto mt-4 max-w-sm text-base leading-7 text-zinc-600">{body}</p>
+                <div aria-hidden="true" className="mx-auto mb-5 size-40 sm:size-44" style={{ backgroundImage: "url('/images/melon-independence-icons.png')", backgroundSize: "300% 100%", backgroundPosition: `${index * 50}% center`, backgroundRepeat: "no-repeat" }} />
+                <h3 className={`${independenceFont.className} text-[32px] leading-tight text-zinc-900`}>{title}</h3>
+                <p className="mx-auto mt-5 max-w-[270px] text-base leading-7 text-zinc-600">{body}</p>
               </article>
             ))}
           </div>
