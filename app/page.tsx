@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FAQAccordion } from "../components/FAQAccordion";
 import { FeatureCard } from "../components/FeatureCard";
 import { SectionTitle } from "../components/SectionTitle";
@@ -108,7 +109,35 @@ export default function Home() {
               <StoreButtons />
             </div>
           </div>
-          <Image src="/images/melon-hero-phone-mascot.png" alt="Melon mascot leaning against a diagonal phone showing a food product score, ingredients, and dietary flags" width={1312} height={1199} sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1024px) 560px, 580px" priority className="mx-auto h-auto w-full max-w-[560px] lg:max-w-none" />
+          <div className="relative isolate mx-auto w-full max-w-[600px]">
+            <Image src="/images/melon-hero-green-accents.png" alt="" aria-hidden="true" fill sizes="(max-width: 640px) 100vw, 600px" className="pointer-events-none -z-10 scale-110 object-contain" />
+            <Image src="/images/melon-hero-phone-mascot.png" alt="Melon mascot leaning against a diagonal phone showing a food product score, ingredients, and dietary flags" width={1312} height={1199} sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1024px) 560px, 580px" priority className="mx-auto h-auto w-full" />
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="independence-heading" className="bg-white py-16 sm:py-20">
+        <div className="container-page">
+          <header className="mx-auto max-w-2xl text-center">
+            <h2 id="independence-heading" className="text-3xl font-semibold leading-tight text-zinc-900 sm:text-4xl">Independent by design.</h2>
+            <p className="mt-5 text-lg leading-8 text-zinc-600">Melon is an independent project built to help you understand your food, not to promote a brand.</p>
+          </header>
+          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-12">
+            {[
+              ["No brand influence", "Brands and manufacturers do not determine Melon's scores or product assessments. Our focus is the food information that matters to you."],
+              ["Scores with explanations", "We bring nutrition, additives, and processing together with explanations, so you can understand what contributes to each result."],
+              ["Your choices come first", "Food choices are personal. Melon gives you information to explore according to your needs and values, without telling you what to eat."],
+            ].map(([title, body]) => (
+              <article key={title} className="text-center">
+                <div aria-hidden="true" className="mx-auto mb-6 h-1 w-10 bg-melon-300" />
+                <h3 className="text-xl font-semibold text-melon-700">{title}</h3>
+                <p className="mx-auto mt-4 max-w-sm text-base leading-7 text-zinc-600">{body}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link href="/our-mission" className="font-semibold text-melon-700 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-melon-700">Read our mission</Link>
+          </div>
         </div>
       </section>
 
