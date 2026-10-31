@@ -5,6 +5,7 @@ import { StoreButtons } from "./StoreButtons";
 const groups = [
   { title: "Discover", links: [
     { label: "Our Mission", href: "/our-mission" },
+    { label: "Marketplace", href: "/marketplace" },
     { label: "Local Sources", href: "/local-sources" },
     { label: "Scoring Method", href: "/scoring-method" },
     { label: "Insights", href: "/insights" },

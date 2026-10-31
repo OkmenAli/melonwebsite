@@ -10,6 +10,7 @@ const routes: Array<{
 }> = [
   { path: "", changeFrequency: "weekly", priority: 1 },
   { path: "/our-mission", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/marketplace", changeFrequency: "monthly", priority: 0.8 },
   { path: "/local-sources", changeFrequency: "monthly", priority: 0.8 },
   { path: "/insights", changeFrequency: "weekly", priority: 0.9 },
   { path: "/insights/mono-and-diglycerides-e471", changeFrequency: "weekly", priority: 0.85 },
@@ -24,7 +25,7 @@ const routes: Array<{
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${baseUrl}${route.path}`,
-    lastModified: ["/local-sources", "/our-mission"].includes(route.path) ? new Date("2026-10-27") : lastModified,
+    lastModified: route.path === "/marketplace" ? new Date("2026-10-30") : ["/local-sources", "/our-mission"].includes(route.path) ? new Date("2026-10-27") : lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
