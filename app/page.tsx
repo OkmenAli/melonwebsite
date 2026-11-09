@@ -165,8 +165,8 @@ export default function Home() {
       <section className="section-pad bg-fog">
         <div className="container-page">
           <SectionTitle eyebrow="Product comparison" title="See why it scored that way." body="Compare products side by side with the score, ingredients and additives in view." />
-          <div className="mt-12 overflow-hidden rounded-[38px] border border-melon-100 bg-white p-3 shadow-soft sm:p-5">
-            <Image src="/images/product-alternative-comparison.png" alt="Melon comparison showing a lower-scoring Doritos product and a higher-scoring Siete sea salt chips alternative" width={1536} height={1024} className="h-auto w-full rounded-[30px]" />
+          <div className="mt-12">
+            <Image src="/images/product-comparison-transparent.png" alt="Melon comparison showing a lower-scoring Doritos product and a higher-scoring Siete sea salt chips alternative" width={1536} height={1024} sizes="(max-width: 1280px) 100vw, 1200px" className="h-auto w-full object-contain" />
           </div>
         </div>
       </section>
