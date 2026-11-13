@@ -114,7 +114,7 @@ export default function Home() {
           </div>
           <div className="relative isolate mx-auto w-full max-w-[600px]">
             <Image src="/images/melon-hero-green-accents.png" alt="" aria-hidden="true" fill sizes="(max-width: 640px) 100vw, 600px" className="pointer-events-none -z-10 scale-110 object-contain" />
-            <Image src="/images/melon-hero-phone-mascot.png" alt="Melon mascot leaning against a diagonal phone showing a food product score, ingredients, and dietary flags" width={1312} height={1199} sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1024px) 560px, 580px" priority className="mx-auto h-auto w-full" />
+            <Image src="/images/melon-hero-phone-mascot-v2.png" alt="Melon mascot leaning against a diagonal phone showing a food product score, ingredients, and dietary flags" width={1312} height={1199} sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1024px) 560px, 580px" priority className="mx-auto h-auto w-full" />
           </div>
         </div>
       </section>
