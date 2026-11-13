@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import MarketplaceWaitlist from "../../components/waitlist/MarketplaceWaitlist";
 
 const description = "Melon Marketplace is coming soon: thoughtfully made food, wellness, and everyday health products from independent brands and small businesses.";
 
@@ -43,6 +44,7 @@ export default function MarketplacePage() {
           className="mx-auto h-auto w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[520px]"
         />
       </section>
+      <MarketplaceWaitlist />
     </main>
   );
 }
