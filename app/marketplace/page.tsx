@@ -31,7 +31,7 @@ export default function MarketplacePage() {
           </h1>
           <div className="mt-7 max-w-xl space-y-5 text-lg leading-8 text-zinc-600">
             <p>We&apos;re building a curated marketplace for thoughtfully made food, wellness, and everyday health products from independent brands and small businesses. A place to discover products with confidence, understand what&apos;s inside, and get to know the people behind them.</p>
-            <p>We&apos;re currently bringing together our first sellers&mdash;businesses that value quality, transparency, and the care that goes into their products. Our mission is to make healthier choices easier to find while giving small businesses the visibility and support they deserve.</p>
+            <p>We&apos;re currently bringing together our first businesses that value quality, transparency, and the care that goes into their products. Our mission is to make healthier choices easier to find while giving small businesses the visibility and support they deserve.</p>
           </div>
         </div>
         <Image
