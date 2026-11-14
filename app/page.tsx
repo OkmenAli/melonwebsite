@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Dancing_Script } from "next/font/google";
 import { FAQAccordion } from "../components/FAQAccordion";
-import { FeatureCard } from "../components/FeatureCard";
 import { SectionTitle } from "../components/SectionTitle";
 import { StoreButtons } from "../components/StoreButtons";
 
@@ -13,15 +12,6 @@ const onboardingScreens = [
   ["/images/onboarding-dietary.png", "Dietary preference", "Lifestyle preferences help Melon highlight foods that may not match the way you eat."],
   ["/images/onboarding-religious.png", "Religious food preference", "Halal and kosher filters surface conflicts and uncertainty when product data allows."],
   ["/images/onboarding-allergies.png", "Allergy watchlist", "Allergen choices make important label signals easier to spot on every product page."],
-];
-
-const insightCards = [
-  ["Allergies", "Bring allergen concerns into every label scan."],
-  ["Dietary preferences", "See vegan, vegetarian, seed oil, and nutrition context quickly."],
-  ["Religious preferences", "Flag halal, kosher, and uncertain ingredient signals when data allows."],
-  ["Shopping for kids", "Spot products that deserve a closer look for family shopping."],
-  ["Pregnancy considerations", "Surface ingredients and additives worth reviewing carefully."],
-  ["Seed oil concerns", "Call out common seed oils when they appear in ingredient lists."],
 ];
 
 const stats = [
@@ -198,11 +188,6 @@ export default function Home() {
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {onboardingScreens.map(([src, title, body]) => (
               <ProductScreenshotCard key={src} src={src} title={title} body={body} />
-            ))}
-          </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {insightCards.map(([title, body]) => (
-              <FeatureCard key={title} title={title} body={body} />
             ))}
           </div>
         </div>
