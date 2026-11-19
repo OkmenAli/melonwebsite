@@ -6,6 +6,13 @@ const description =
 
 const articles = [
   {
+    title: "What Are Natural Flavors? What Science Actually Says",
+    href: "/insights/natural-flavors",
+    readTime: "4 min read",
+    description: "What natural flavors mean, how they are made, and why natural does not automatically mean healthier or suitable for every diet.",
+    sources: ["U.S. FDA", "Electronic Code of Federal Regulations", "Journal of Biotechnology"],
+  },
+  {
     title: "Red 40 and Artificial Food Dyes: What Does the Science Actually Say?",
     href: "/insights/red-40-artificial-food-dyes",
     readTime: "7 min read",
