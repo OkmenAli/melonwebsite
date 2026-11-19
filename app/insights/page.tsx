@@ -6,6 +6,13 @@ const description =
 
 const articles = [
   {
+    title: "Red 40 and Artificial Food Dyes: What Does the Science Actually Say?",
+    href: "/insights/red-40-artificial-food-dyes",
+    readTime: "7 min read",
+    description: "What research says about synthetic food dyes, children's behaviour, and the differences between evidence, uncertainty, and regulatory decisions.",
+    sources: ["The Lancet", "JAACAP", "California OEHHA", "FDA", "Health Canada", "European Union"],
+  },
+  {
     title: "Mono- and Diglycerides: What E471 Means on Food Labels",
     href: "/insights/mono-and-diglycerides-e471",
     readTime: "6 min read",
